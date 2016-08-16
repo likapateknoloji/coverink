@@ -1,0 +1,9 @@
+convert 0.jpg -colorspace gray +matte -colors 4 -depth 2 -resize '800x600>' pgm:- | ./4_level_gray_4bpp_BMP_converter.py > 0.bmp
+convert 0.bmp -crop 800xY+0+600 1.png
+convert 0.bmp -crop 800xY+0+1200 2.png
+convert 0.bmp -crop 800xY+0+1800 3.png
+convert 0.bmp -crop 800xY+0+2400 4.png
+convert 0.bmp -crop 800xY+0+3000 5.png
+convert 0.bmp -crop 800xY+0+3600 6.png
+convert 0.bmp -crop 800xY+0+4200 7.png
+
